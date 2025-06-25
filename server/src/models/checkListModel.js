@@ -17,14 +17,17 @@ const Checklist = sequelize.define(
     tiresOk: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      field: "tires_ok", 
     },
     brakesOk: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      field: "brakes_ok",
     },
     lightsOk: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      field: "lights_ok",
     },
     observations: {
       type: DataTypes.TEXT,
@@ -33,6 +36,17 @@ const Checklist = sequelize.define(
     userId: {
       type: DataTypes.UUID,
       allowNull: false,
+      field: "user_id",
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      field: "createdAt", 
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      field: "updatedAt",
     },
   },
   {
