@@ -9,8 +9,10 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #EAD370;
+  max-height: 80vh; /* Limita a altura do container para 80% da altura da tela */
+  overflow-y: auto; /* Permite o scroll vertical quando o conteúdo exceder o tamanho */
+  overflow-x: hidden; /* Desativa o scroll horizontal, caso não seja necessário */
 }
-
 
 h2 {
   font-size: 1.8rem;

@@ -2,8 +2,12 @@
 padding: 0;
 box-sizing: border-box;}
 
-body {
+
+html, body {
   background-color: #ead370; 
+  height: 100%;
+  margin: 0;
+  overflow: hidden;  
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

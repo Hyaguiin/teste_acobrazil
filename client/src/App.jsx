@@ -4,10 +4,11 @@ import Register from './components/register/index';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import Layout from './context/layout';
+import Layout from './context/layout';  
 import Home from './pages';
 import CreateChecklist from './components/checklistList/index'; 
 import ChecklistList from './components/checklist/index'; 
+import PrivateRoute from './hooks/privateRoute'; 
 
 function App() {
   return (
@@ -17,10 +18,13 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route element={<Layout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/dashboard/checklist" element={<ChecklistList />} /> 
-          <Route path="/dashboard/checklist/create" element={<CreateChecklist />} /> 
+       
+        <Route element={<PrivateRoute />}> 
+          <Route element={<Layout />}>  
+            <Route path="/home" element={<Home />} />
+            <Route path="/dashboard/checklist" element={<ChecklistList />} />
+            <Route path="/dashboard/checklist/create" element={<CreateChecklist />} />
+          </Route>
         </Route>
 
         <Route path="*" element={<h2>404 - Página não encontrada</h2>} />

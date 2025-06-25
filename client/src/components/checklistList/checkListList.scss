@@ -1,3 +1,4 @@
+
 .checklist-list-container {
   padding: 20px;
   max-width: 800px;
@@ -6,6 +7,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #EAD370;
+  max-height: 80vh;  
+  overflow-y: auto;  
 }
 
 .checklist-list h2 {
