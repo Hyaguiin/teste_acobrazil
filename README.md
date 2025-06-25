@@ -15,10 +15,15 @@ Antes de começar, verifique se você tem os seguintes requisitos instalados:
 
 - [Node.js](https://nodejs.org) (versão LTS recomendada)
 - [npm](https://www.npmjs.com/) (gerenciador de pacotes do Node.js)
+- [PostgreSQL](https://www.postgresql.org/) (para o backend)
+
+---
 
 ## Configuração do Projeto
 
 Siga os passos abaixo para configurar e rodar o projeto localmente.
+
+---
 
 ### 1. Configurando o Frontend (Client)
 
@@ -28,19 +33,27 @@ Siga os passos abaixo para configurar e rodar o projeto localmente.
     cd client
     ```
 
-2. Instale as dependências:
+2. Crie um arquivo `.env` com o seguinte conteúdo:
+
+    ```env
+    VITE_API_BASE_URL=http://localhost:5000/api
+    ```
+
+3. Instale as dependências:
 
     ```bash
     npm install
     ```
 
-3. Inicie o servidor de desenvolvimento do frontend:
+4. Inicie o servidor de desenvolvimento do frontend:
 
     ```bash
     npm run dev
     ```
 
-O frontend estará disponível em `http://localhost:5173` ou a porta configurada no seu ambiente.
+O frontend estará disponível em `http://localhost:5173`.
+
+---
 
 ### 2. Configurando o Backend (Server)
 
@@ -50,23 +63,33 @@ O frontend estará disponível em `http://localhost:5173` ou a porta configurada
     cd server
     ```
 
-2. Instale as dependências:
+2. Crie um arquivo `.env` com o seguinte conteúdo:
+
+    ```env
+    DATABASE_URL=postgresql://seuusuarioo:suasenha@localhost:5432/motoristaacobrazil
+    PORT=5000
+    JWT_SECRET=!@motoristaacobrazil!@
+    JWT_EXPIRES=1h
+    CORS_ALLOWED=http://localhost:5173
+    ```
+
+3. Instale as dependências:
 
     ```bash
     npm install
     ```
 
-3. Inicie o servidor de desenvolvimento do backend:
+4. Inicie o servidor de desenvolvimento do backend:
 
     ```bash
     npm run dev
     ```
 
-O backend estará disponível em `http://localhost:5000` ou a porta configurada no seu ambiente.
+O backend estará disponível em `http://localhost:5000`.
+
+---
 
 ## Testes
-
-Instruções sobre como rodar os testes (se houver).
 
 ### 1. Rodando os testes do frontend:
 
