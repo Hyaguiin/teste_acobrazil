@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 class UserService {
   constructor() {}
 
-  encryptPasswordService = async (password) => {
+  encryptPassword = async (password) => {
     try {
       const salt = await bcrypt.genSalt(10);
       return await bcrypt.hash(password, salt);
@@ -120,7 +120,7 @@ class UserService {
     try {
       if (!id) throw new Error("User ID is required");
 
-      const user = await this.findUserById(id);
+      const user = await this.findUserByIdService(id);
       if (!user) throw new Error("User not found");
 
       if (username && username !== user.username) {
@@ -158,7 +158,7 @@ class UserService {
     try {
       if (!id) throw new Error("User ID is required");
 
-      const user = await this.findUserById(id);
+      const user = await this.findUserByIdService(id);
       if (!user) throw new Error("User not found");
 
       await user.destroy();

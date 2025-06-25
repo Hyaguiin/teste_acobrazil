@@ -4,7 +4,7 @@ const authenticateToken = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-router.post('/', UserController.createUserController); // cria sem autenticação (registro)
+router.post('/', UserController.createUserController); 
 router.get('/:id', authenticateToken, UserController.getUserByIdController);
 router.get('/username/:username', authenticateToken, UserController.getUserByUsernameController);
 router.get('/email/:email', authenticateToken, UserController.getUserByEmailController);

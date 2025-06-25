@@ -24,8 +24,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/checklists", checklistRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/checklist", checklistRoutes);
 
 app.get("/", async (req, res) => {
   try {
