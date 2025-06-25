@@ -7,9 +7,9 @@ class AuthController {
 
   loginController = async (req, res) => {
     try {
-      const { usernameOrEmail, password } = req.body;
+      const { email, password } = req.body;
       const { user, token } = await this.authService.loginService({
-        usernameOrEmail,
+        email,
         password,
       });
       res.json({ user, token });

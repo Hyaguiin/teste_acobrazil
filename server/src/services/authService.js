@@ -41,14 +41,14 @@ class AuthService {
     }
   };
 
-  loginService = async ({ usernameOrEmail, password }) => {
+  loginService = async ({ email, password }) => {
     try {
-      if (!usernameOrEmail || !password)
+      if (!email || !password)
         throw new Error("Username/email and password are required");
 
-      let user = await UserService.findUserByUsernameService(usernameOrEmail);
+      let user = await UserService.findUserByUsernameService(email);
       if (!user) {
-        user = await UserService.findUserByEmailService(usernameOrEmail);
+        user = await UserService.findUserByEmailService(email);
       } else if (!user) {
         throw new Error("User not found");
       }
