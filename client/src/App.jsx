@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Layout from './context/layout';
 import Home from './pages';
+import CreateChecklist from './components/checklistList/index'; 
+import ChecklistList from './components/checklist/index'; 
 
 function App() {
   return (
@@ -16,11 +18,9 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         <Route element={<Layout />}>
-          <Route path="/home" element={<Home />} /> {/* Página Home */}
-          {/* Outras rotas com layout */}
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-          {/* <Route path="/checklist" element={<Checklist />} /> */}
-          {/* <Route path="/historico" element={<Historico />} /> */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/dashboard/checklist" element={<ChecklistList />} /> 
+          <Route path="/dashboard/checklist/create" element={<CreateChecklist />} /> 
         </Route>
 
         <Route path="*" element={<h2>404 - Página não encontrada</h2>} />

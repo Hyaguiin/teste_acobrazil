@@ -1,23 +1,27 @@
 .sidebar {
   width: 250px;
-  background-color: #116549; 
+  background-color: #116549;
   color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   height: 100vh;
+  background-image: linear-gradient(to right, transparent calc(100% - 0.5px), white 0%);
 }
+
+
+
 
 .sidebar-header {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #FBD10C; 
+  color: #fbd10c;
 }
 .sidebar-logo {
-  width: 100px; 
+  width: 100px;
   height: auto;
 }
 
@@ -38,5 +42,5 @@
 }
 
 .sidebar-nav a:hover {
-  color: #FBD10C; 
+  color: #fbd10c;
 }

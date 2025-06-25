@@ -9,7 +9,8 @@ export default function Sidebar() {
       </div>
       <nav className="sidebar-nav">
         <ul>
-          <li><Link to="/dashboard/checklist">Checklist</Link></li>
+          <li><Link to="/dashboard/checklist/create">Ver CheckLists</Link></li> 
+          <li><Link to="/dashboard/checklist">+ Criar Checklist</Link></li> 
           <li><Link to="/dashboard/historico">Histórico</Link></li>
           <li><Link to="/dashboard/configuracoes">Configurações</Link></li>
         </ul>

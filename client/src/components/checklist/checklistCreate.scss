@@ -1,0 +1,116 @@
+.create-checklist-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;  
+  top: 100px;  
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #EAD370;
+}
+
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #116549; 
+  text-align: center;
+}
+
+.error-message {
+  color: #fff;
+  background-color: #EAD370;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ffc107;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.create-checklist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #116549; 
+}
+
+select,
+input[type="checkbox"],
+textarea {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid  #116549; 
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+select:focus,
+textarea:focus,
+input[type="checkbox"]:focus {
+  border-color: #116549;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button.submit-btn {
+  padding: 12px;
+  background-color: #116549; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.submit-btn:hover {
+  background-color: #0e4c3b; 
+}
+
+button.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .create-checklist-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  select,
+  input[type="checkbox"],
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button.submit-btn {
+    font-size: 0.9rem;
+  }
+}

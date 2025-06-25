@@ -1,0 +1,45 @@
+.checklist-list-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #EAD370;
+}
+
+.checklist-list h2 {
+  text-align: center;
+  color: #116549;
+}
+
+.checklist-list {
+  margin-top: 20px;
+}
+
+.checklist-item {
+  border: 1px solid #EAD370;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.checklist-item h3 {
+  color: #116549;
+}
+
+.checklist-item p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.checklist-item strong {
+  color: #116549;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+}
