@@ -1,5 +1,7 @@
 # Teste para Trabalho - ACObrazil
 
+<img src="logoaco.png" alt="Logo ACO Brasil" width="150"/>
+
 Este repositório contém o projeto para o teste de trabalho da ACObrazil. O projeto é dividido em duas partes: **Client** e **Server**. A seguir, você encontrará as instruções para configurar e executar ambos os ambientes.
 
 ## Estrutura do Projeto
